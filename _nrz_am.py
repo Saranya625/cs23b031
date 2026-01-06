@@ -14,6 +14,7 @@ plt.plot(nrz_signal)
 plt.xlabel('Sample')
 plt.ylabel('Amplitude')
 plt.show()
+
 #Sinusoidal wave - 20 Hz
 fc = 20 
 fs = bits_per_sample 
@@ -23,4 +24,8 @@ t = np.linspace(0,T, len(nrz_signal), endpoint=False)
 
 carrier_signal = np.sin(2 * np.pi * fc * t)
 plt.plot(carrier_signal)
+
+#Amplitude Modulation 
+modulated_signal = nrz_signal * carrier_signal
+plt.plot(modulated_signal)
  
