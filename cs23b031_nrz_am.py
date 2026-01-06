@@ -10,6 +10,7 @@ for bit in data_sequence:
   else:
     nrz_signal.extend([-1] * bits_per_sample)
 nrz_signal = np.array(nrz_signal)
+print(nrz_signal)
 plt.plot(nrz_signal)
 plt.xlabel('Sample')
 plt.ylabel('Amplitude')
