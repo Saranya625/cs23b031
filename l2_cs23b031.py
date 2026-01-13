@@ -15,3 +15,6 @@ for p in p_values:
             success += 1
 
     empirical = success / trials
+    analytical = 1 - (1 - p) ** n
+    empirical_probs.append(empirical)
+    analytical_probs.append(analytical)
